@@ -7,7 +7,7 @@ form.addEventListener("submit", (e) => {
     let numeroA =  inputs[0]
     let numeroB = inputs[1]
     let mesage = document.querySelector("#message")
-    let bMaior = numeroB.value > numeroA.value ? true : false
+    let formValido = numeroB.value > numeroA.value ? true : false
     
     let mostrarMessage = () => mesage.style.display = "block"
     let esconderMessage = () => mesage.style.display = "none"
@@ -17,17 +17,9 @@ form.addEventListener("submit", (e) => {
         }
     }
 
-    if (bMaior){
+    if (formValido){
         mesage.style.color = "green"
-        mesage.innerHTML = `${numeroB.value} é maior que ${numeroA.value}`
-        mostrarMessage()
-        setTimeout(esconderMessage, 2000)
-        setTimeout(limparInputs, 2000)
-    }
-
-    else if (numeroB.value === numeroA.value){
-        mesage.style.color = "yellow"
-        mesage.innerHTML = `${numeroB.value} é igual a ${numeroA.value}`
+        mesage.innerHTML = `Formulario válido`
         mostrarMessage()
         setTimeout(esconderMessage, 2000)
         setTimeout(limparInputs, 2000)
@@ -35,7 +27,7 @@ form.addEventListener("submit", (e) => {
 
     else {
         mesage.style.color = "red"
-        mesage.innerHTML = `${numeroB.value} não é maior que ${numeroA.value}`
+        mesage.innerHTML = `Para o formulario ser válido o número B precisa ser maior que o número A`
         mostrarMessage()
         setTimeout(esconderMessage, 2000)
         setTimeout(limparInputs, 2000)
