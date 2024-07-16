@@ -1,308 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
-
-:root {
-    --main: #5e7492;
-    --primary-sports: #538a6a;
-    --secondary-sports: #f2ffef;
-    --primary-economy: goldenrod;
-    --secondary-economy: rgb(255, 249, 234);
-    --primary-tecnology: cornflowerblue;
-    --secondary-tecnology: rgba(218, 216, 216, 0.336);
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
 * {
     padding: 0;
-    margin: 0;
     border: 0;
-    text-decoration: none;
+    margin: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-hr {
-    width: 100%;
-    height: 0.2vh;
-    background-color: rgb(36,36,36);
-}
-
-main {
+body {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, lightblue, cornflowerblue);
 }
 
-div > a {
-    transition: 0.2s ease-in-out;
-    font-weight: 900;
+input {
+    padding: 1vh;
+    width: 70vh;
 }
 
-header, footer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+button {
     padding: 2vh 5vh;
-    gap: 1vh;
-    color: white;
-    background-color: var(--main);
-}
-
-header > hr {
-    width: 100%;
-    background-color: white;
-}
-
-header > h1 {
-    text-align: center;
-    font-size: clamp(3vh, 4vh, 5vh);
-}
-
-header > nav {
-    display: flex;
-    flex-direction: row;
-    gap: 2vh;
-}
-
-header > nav > a {
-    color: white;
-    position: relative;
-    font-size: clamp(1.6vh, 2vh, 3vh);
-}
-
-header > nav > a::after {
-    width: 0;
-    height: 0.2vh;
-    content: "";
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    position: absolute;
-    transition: 0.2s ease-in-out;
-}
-
-header > nav > a:hover::after {
-    width: 100%;
-}
-
-footer > h1 {
-    font-weight: 400;
-    font-size: 1.6vh;
-}
-
-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5vh 0;
-    gap: 2vh;
-}
-
-section > h2 {
-    font-size: 4vh;
-    font-weight: 900;
-}
-
-section > div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2vh;
-    justify-content: center;
-}
-
-section > div > article {
-    overflow: hidden;
-    border-radius: 2vh 0 0 0;
-}
-
-section > div > article:hover {
-    scale: 1.05;
-}
-
-section > div > article > img {
-    width: 100%;
-    height: 20vh;
-    object-fit: cover;
-    object-position: center;
-}
-
-section > div > article > div {
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-    padding: 1vh;
-}
-
-section > div > article > div > h3 {
-    font-size: 1.6vh;
-}
-
-section > div > article > div > h4 {
-    font-weight: 300;
     font-size: 1.8vh;
-}
-
-section > div > article > div > a {
-    font-size: 2vh;
-}
-
-section > div > article > div > a:hover {
-    text-decoration: underline;
-}
-
-.letras-grossas {
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
     color: white;
-    font-size: 3vh;
-    font-weight: 900;
+    background-color: cornflowerblue;
 }
 
-.flex{
-    width: 35vh;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-    background-color: white;
-    filter: drop-shadow(0 0 0.6vh rgba(0, 0, 0, 0.356));
-    transition: 0.2s ease-in-out;
+button:hover {
+    background-color: rgb(59, 119, 179);
 }
 
-#popular {
-    width: 90%;
-    height: 70vh;
-    gap: 0;
-    overflow: hidden;
-    filter: drop-shadow(0 0 3vh rgba(0, 0, 0, 0.466));
+input, button {
+    display: block;
+    margin-bottom: 1vh;
 }
 
-#popular > #titulo {
-    width: 100%;
-    height: 7vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1vh;
-    background-color: var(--main);
-}
-
-#popular > #titulo > h2 {
+h1 {
     color: white;
-    font-size: clamp(1.8vh, 2vh, 3vh);
+    font-size: 4vh;
+    margin-bottom: 2vh;
 }
 
-#popular > #lugares {
-    width: 100%;
-    height: 80vh;
-    gap: 0;
-    display: flex;
-    flex-direction: row;
-    transition: all 0.5s ease;
-    overflow: hidden;
-}
-
-#popular > #lugares > #lugar1 {
-    width: 50%;
-    background-image: url("https://images.pexels.com/photos/274506/pexels-photo-274506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-}
-
-#popular > #lugares > div {
-    width: 50%;
-    overflow: hidden;
-}
-
-#popular > #lugares > div > #lugar2 {
-    background-image: url("https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-}
-
-#popular > #lugares > div > #lugar3 {
-    background-image: url("https://images.pexels.com/photos/5668484/pexels-photo-5668484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-}
-
-#lugar2, #lugar3 {
-    width: 100%;
-    height: 50%;
-}
-
-#lugar1, #lugar2, #lugar3 {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: all 0.5s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#lugar1:hover, #lugar2:hover, #lugar3:hover {
-    transform: scale(1.1);
-}
-
-#esporte {
-    background-color: var(--secondary-sports);
-}
-
-#esporte h2 {
-    color: var(--primary-sports);
-}
-
-#esporte > div > article > div > a {
-    color: var(--primary-sports);
-}
-
-#esporte > div > article {
-    border-bottom: 0.3vh solid var(--primary-sports);
-}
-
-#economia {
-    background-color: var(--secondary-economy);
-}
-
-#economia > h2 {
-    color: var(--primary-economy);
-}
-
-#economia > div > article {
-    border-bottom: 0.3vh solid var(--primary-economy);
-}
-
-#economia > div > article > div > a {
-    color: var(--primary-economy);
-}
-
-#tecnologia {
-    background-color: var(--secondary-tecnology);
-}
-
-#tecnologia > h2 {
-    color: var(--primary-tecnology);
-}
-
-#tecnologia > div > article > div > a {
-    color: var(--primary-tecnology)
-}
-
-#games {
-    background-color: #b05bff;
-}
-
-#games > h2 {
-    font-family: "Anton SC", sans-serif;
-    color: yellow;
-}
-
-#games > div > article {
-    border-radius: 1.5vh;
-}
-
-#games > div > article > div > a {
-    color: #b05bff;
+#message {
+    display: none;
+    font-size: 2.5vh;
 }
