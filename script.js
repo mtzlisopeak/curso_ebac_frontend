@@ -4,10 +4,10 @@ let inputs = document.querySelectorAll("input")
 form.addEventListener("submit", (e) => {
     e.preventDefault()
 
-    let primeiroNumero =  inputs[0]
-    let segundoNumero = inputs[1]
+    let numeroA =  inputs[0]
+    let numeroB = inputs[1]
     let mesage = document.querySelector("#message")
-    let primeiroMaior = primeiroNumero.value > segundoNumero.value ? true : false
+    let bMaior = numeroB.value > numeroA.value ? true : false
     
     let mostrarMessage = () => mesage.style.display = "block"
     let esconderMessage = () => mesage.style.display = "none"
@@ -17,17 +17,17 @@ form.addEventListener("submit", (e) => {
         }
     }
 
-    if (primeiroMaior){
+    if (bMaior){
         mesage.style.color = "green"
-        mesage.innerHTML = `${primeiroNumero.value} é maior que ${segundoNumero.value}`
+        mesage.innerHTML = `${numeroB.value} é maior que ${numeroA.value}`
         mostrarMessage()
         setTimeout(esconderMessage, 2000)
         setTimeout(limparInputs, 2000)
     }
 
-    else if (primeiroNumero.value === segundoNumero.value){
+    else if (numeroB.value === numeroA.value){
         mesage.style.color = "yellow"
-        mesage.innerHTML = `${primeiroNumero.value} é igual a ${segundoNumero.value}`
+        mesage.innerHTML = `${numeroB.value} é igual a ${numeroA.value}`
         mostrarMessage()
         setTimeout(esconderMessage, 2000)
         setTimeout(limparInputs, 2000)
@@ -35,7 +35,7 @@ form.addEventListener("submit", (e) => {
 
     else {
         mesage.style.color = "red"
-        mesage.innerHTML = `${primeiroNumero.value} não é maior que ${segundoNumero.value}`
+        mesage.innerHTML = `${numeroB.value} não é maior que ${numeroA.value}`
         mostrarMessage()
         setTimeout(esconderMessage, 2000)
         setTimeout(limparInputs, 2000)
