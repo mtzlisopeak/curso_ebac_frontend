@@ -3,6 +3,6 @@
     "sass": "^1.77.8"
   },
   "scripts": {
-  "sass": "sass source/main.scss build/main.css"
+  "sass": "sass source/main.scss build/main.css --watch"
 }
 }
