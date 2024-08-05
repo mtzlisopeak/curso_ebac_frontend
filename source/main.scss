@@ -1,0 +1,82 @@
+@use "config.scss";
+@use "mixins.scss";
+
+body {
+    background-color: config.$backgroundColor;
+}
+
+.container {
+    @include mixins.centerContainer;
+}
+
+header {
+    background-color: config.$myBlue;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    & .container {
+        @include mixins.centralize;
+        padding: config.transformPixels(16px) 0;
+    }
+
+    & .menu {
+        display: flex;
+        li {
+            font-weight: bold;
+            margin-left: config.transformPixels(24px);
+            a {
+                color: config.$myWhite;
+            }
+        }
+    }
+
+}
+
+section {
+    padding: config.transformPixels(56px) 0;
+}
+
+.products {
+    @include mixins.applyGrid;
+    margin-top: config.transformPixels(40px);
+    .product-item img {
+        width: 100%;
+        border-radius: config.transformPixels(16px);
+    }
+
+    .product-button {
+        display: block;
+        background-color: config.$myGreen;
+        color: config.$myWhite;
+        text-align: center;
+        padding: config.transformPixels(8px) 0;
+        border-radius: config.transformPixels(8px);
+        margin-top: config.transformPixels(8px);
+    }
+
+    .product-button:hover {
+        background-color: lighten(config.$myGreen, 5%);
+    }
+}
+
+@media screen and (max-width: config.$tablet) {
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: config.$mobile) {
+    .products {
+        display: block;
+    }
+
+    .product-item  {
+        margin-bottom: config.transformPixels(32px);
+    }
+}

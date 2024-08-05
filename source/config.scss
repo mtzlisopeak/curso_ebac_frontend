@@ -1,0 +1,26 @@
+@use "sass:math";
+
+// function to transform pixels in em
+@function transformPixels($valorDesejado, $pixel: 16px){
+    @return math.div($valorDesejado, $pixel) * 1em;
+}
+
+// reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+// color scheme
+$myBlue: #182C61;
+$myWhite: #fff;
+$myGreen: #44bd32;
+$backgroundColor: #f5f6fa;
+
+// breakpoints
+$tablet: 1023px;
+$mobile: 767px;

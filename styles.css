@@ -4,21 +4,24 @@
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
 }
-
+/* ja foi*/ 
 body {
     background-color: #f5f6fa;
 }
 
+/* ja foi*/ 
 li {
     list-style: none;
 }
 
+/* ja foi*/ 
 .container {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
 }
 
+/* ja foi*/ 
 header {
     background-color: #182C61;
     position: sticky;
@@ -26,6 +29,7 @@ header {
     left: 0;
 }
 
+/* ja foi*/
 header .container {
     display: flex;
     justify-content: space-between;
@@ -33,6 +37,7 @@ header .container {
     padding: 16px 0;
 }
 
+/* ja foi*/
 .menu {
     display: flex;
 }
