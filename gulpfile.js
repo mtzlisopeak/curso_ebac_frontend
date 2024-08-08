@@ -2,15 +2,14 @@ const gulp = require("gulp")
 const sass = require("gulp-sass")(require("sass"))
 const imagemin = require("imagemin")
 const sourcemaps = require("gulp-sourcemaps")
-const uglify = require("gulp-uglify")
+const terser = require("gulp-terser")
 const obfuscate = require("gulp-obfuscate")
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const optipng = require("imagemin-optipng");
 
-
 function compressJS(){
     return gulp.src("./src/JS/*.js")
-        .pipe(uglify())
+        .pipe(terser())
         .pipe(obfuscate())
         .pipe(gulp.dest("./dist/JS"))
 }

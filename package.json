@@ -10,7 +10,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "gulp": "^5.0.0"
+    "gulp": "^5.0.0",
+    "gulp-terser": "^2.1.0"
   },
   "devDependencies": {
     "gulp-imagemin": "^7.1.0",
