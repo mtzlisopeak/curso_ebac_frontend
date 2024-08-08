@@ -39,3 +39,9 @@ async function compressIMG(){
 exports.js = compressJS;
 exports.sass = compileSass;
 exports.img = compressIMG;
+
+exports.default = function(){
+    gulp.watch("./src/IMAGES/*", {ignoreInitial: false}, compressIMG)
+    gulp.watch("./src/JS/.js", {ignoreInitial: false}, compressJS)
+    gulp.watch("./src/SASS/*.scss", {ignoreInitial: false}, compileSass)
+}
